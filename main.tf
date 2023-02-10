@@ -8,6 +8,10 @@ resource "aws_ecr_repository" "repository" {
     scan_on_push = true
   }
 
+  tags = {
+    proyecto = var.app_name
+  }
+
   provisioner "local-exec" {
     # command = <<-EOT
     #   docker pull alpine

@@ -16,3 +16,9 @@ variable "fn_name" {
   nullable    = false
   description = "Function name"
 }
+
+variable "tags" {
+  description = "A map of tags to add to all resources"
+  type        = map(string)
+  default     = {}
+}

@@ -14,3 +14,7 @@ output "fn_name" {
 output "image_tag" {
   value = local.image_tag
 }
+
+output "image_uri" {
+  value = "${module.fetcher_registry_manager.ecr_repository.repository_url}:dummy_container"
+}

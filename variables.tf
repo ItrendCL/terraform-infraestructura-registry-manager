@@ -22,3 +22,9 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "image_tag" {
+  description = "The tag to use for the docker image"
+  type        = string
+  default     = "dummy_container"
+}

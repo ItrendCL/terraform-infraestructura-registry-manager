@@ -10,3 +10,7 @@ output "ecr_repository" {
 output "fn_name" {
   value = var.fn_name
 }
+
+output "image_tag" {
+  value = local.image_tag
+}

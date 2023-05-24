@@ -12,9 +12,9 @@ output "fn_name" {
 }
 
 output "image_tag" {
-  value = local.image_tag
+  value = var.image_tag
 }
 
 output "image_uri" {
-  value = "${module.fetcher_registry_manager.ecr_repository.repository_url}:dummy_container"
+  value = "${aws_ecr_repository.repository.repository_url}:${var.image_tag}"
 }

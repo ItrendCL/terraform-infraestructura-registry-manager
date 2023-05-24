@@ -1,5 +1,5 @@
 resource "aws_ecr_repository" "repository" {
-  name                 = "${var.repository}-lambda-${var.fn_name}"
+  name                 = "${var.repository}/lambdas/${var.app_name}/${var.fn_name}"
   force_delete         = true
   image_tag_mutability = "MUTABLE"
 
